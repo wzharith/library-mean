@@ -15,6 +15,12 @@ app.get('/books', async (req, res) => {
     res.status(200).send(books);
 });
 
+app.post('/books', async (req, res) => {
+   const book = req.body; 
+   const newBook = await BookModel.create(book);
+   res.status(201).send(newBook);
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
     init();

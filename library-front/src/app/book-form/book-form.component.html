@@ -5,16 +5,16 @@
     <form>
         <div class="w3-section">
             <label>Book Name</label>
-            <input class="w3-input w3-border" type="text" placeholder="Book Name" name="title" required>
+            <input class="w3-input w3-border" [(ngModel)]="title" type="text" placeholder="Book Name" name="title" required>
         </div>
         <div class="w3-section">
             <label>Price</label>
-            <input class="w3-input w3-border" type="number" placeholder="Price" name="price" required>
+            <input class="w3-input w3-border" [(ngModel)]="price" type="number" placeholder="Price" name="price" required>
         </div>
         <div class="w3-section">
             <label>Pages</label>
-            <input class="w3-input w3-border" type="number" placeholder="Pages" name="pages" required>
+            <input class="w3-input w3-border" [(ngModel)]="pages" type="number" placeholder="Pages" name="pages" required>
         </div>
-        <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Add Book</button>
+        <button type="submit" (click)="onSave()" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Add Book</button>
     </form>
 </div>
