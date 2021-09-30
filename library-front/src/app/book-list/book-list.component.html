@@ -9,10 +9,10 @@
                 <th>Pages</th>
             </tr>
         </thead>
-        <tr>
-            <td>Programming in Python</td>
-            <td>$50</td>
-            <td>200</td>
+        <tr *ngFor="let book of books">
+            <td>{{book.title}}</td>
+            <td>RM{{book.price}}</td>
+            <td>{{book.pages}}</td>
         </tr>
     </table>
 </div>
